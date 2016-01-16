@@ -17,6 +17,8 @@ int main()
 
   GameLoop();  
 
+  SDL_Quit();
+
   return 0;
 
 }
