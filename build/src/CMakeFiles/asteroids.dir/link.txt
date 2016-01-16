@@ -1,0 +1,1 @@
+/bin/cc  -W -Wall -Wextra -pedantic -std=c99    CMakeFiles/asteroids.dir/game.c.o CMakeFiles/asteroids.dir/main.c.o  -o ../../bin/asteroids -rdynamic -lSDL2 -lpthread -lSDL2_image 
