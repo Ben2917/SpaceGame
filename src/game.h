@@ -8,6 +8,14 @@
 #include <SDL_image.h>
 
 
+#include "player.h"
+#include "timer.h"
+
+
+#define SCREEN_WIDTH 720
+#define SCREEN_HEIGHT 720
+
+
 void GameLoop();
 
 

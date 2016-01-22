@@ -30,7 +30,7 @@ int Init(SDL_Window **w, SDL_Renderer **r)
 {
 
   *w = SDL_CreateWindow("Asteroids",
-    0, 0, 720, 720, SDL_WINDOW_SHOWN);
+    0, 0, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_SHOWN);
 
   if(!*w) { 
     
@@ -68,16 +68,34 @@ void GameLoop()
   if(Init(&w, &r) != 0)
     return;
 
+  Player *p = CreatePlayer(r, "resources/player.png");
+
+  double time = 0.0;
+
   while(!EventLoop()) {
+
+    StartTimer();
+
+    SDL_Delay(17);
 
     SDL_SetRenderDrawColor(r, 0, 0, 0, 255);
  
     SDL_RenderClear(r);
 
+    UpdatePlayer(r, p, time);
+
     SDL_RenderPresent(r);
+  
+    StopTimer();
+
+    time = GetTime();
+
+    // printf("%lf\n", time);
 
   }
 
   Destroy(&w, &r);
+
+  DestroyPlayer(p);
 
 }

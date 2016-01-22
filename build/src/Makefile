@@ -204,6 +204,54 @@ main.c.s:
 	cd /media/sf_VMShared/asteroids/build && $(MAKE) -f src/CMakeFiles/asteroids.dir/build.make src/CMakeFiles/asteroids.dir/main.c.s
 .PHONY : main.c.s
 
+player.o: player.c.o
+.PHONY : player.o
+
+# target to build an object file
+player.c.o:
+	cd /media/sf_VMShared/asteroids/build && $(MAKE) -f src/CMakeFiles/asteroids.dir/build.make src/CMakeFiles/asteroids.dir/player.c.o
+.PHONY : player.c.o
+
+player.i: player.c.i
+.PHONY : player.i
+
+# target to preprocess a source file
+player.c.i:
+	cd /media/sf_VMShared/asteroids/build && $(MAKE) -f src/CMakeFiles/asteroids.dir/build.make src/CMakeFiles/asteroids.dir/player.c.i
+.PHONY : player.c.i
+
+player.s: player.c.s
+.PHONY : player.s
+
+# target to generate assembly for a file
+player.c.s:
+	cd /media/sf_VMShared/asteroids/build && $(MAKE) -f src/CMakeFiles/asteroids.dir/build.make src/CMakeFiles/asteroids.dir/player.c.s
+.PHONY : player.c.s
+
+timer.o: timer.c.o
+.PHONY : timer.o
+
+# target to build an object file
+timer.c.o:
+	cd /media/sf_VMShared/asteroids/build && $(MAKE) -f src/CMakeFiles/asteroids.dir/build.make src/CMakeFiles/asteroids.dir/timer.c.o
+.PHONY : timer.c.o
+
+timer.i: timer.c.i
+.PHONY : timer.i
+
+# target to preprocess a source file
+timer.c.i:
+	cd /media/sf_VMShared/asteroids/build && $(MAKE) -f src/CMakeFiles/asteroids.dir/build.make src/CMakeFiles/asteroids.dir/timer.c.i
+.PHONY : timer.c.i
+
+timer.s: timer.c.s
+.PHONY : timer.s
+
+# target to generate assembly for a file
+timer.c.s:
+	cd /media/sf_VMShared/asteroids/build && $(MAKE) -f src/CMakeFiles/asteroids.dir/build.make src/CMakeFiles/asteroids.dir/timer.c.s
+.PHONY : timer.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -223,6 +271,12 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... player.o"
+	@echo "... player.i"
+	@echo "... player.s"
+	@echo "... timer.o"
+	@echo "... timer.i"
+	@echo "... timer.s"
 .PHONY : help
 
 

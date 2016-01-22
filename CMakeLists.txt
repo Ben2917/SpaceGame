@@ -8,7 +8,7 @@ set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${asteroids_SOURCE_DIR}/cmake")
 
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${asteroids_SOURCE_DIR}/bin)
 
-set(CMAKE_C_FLAGS "-W -Wall -Wextra -pedantic -std=c99")
+set(CMAKE_C_FLAGS "-W -Wall -Wextra -pedantic -std=c99 -lm")
 
 find_package(SDL2 REQUIRED)
 include_directories(${SDL2_INCLUDE_DIR})

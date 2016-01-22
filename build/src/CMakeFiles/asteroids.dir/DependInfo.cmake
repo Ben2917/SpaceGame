@@ -6,6 +6,8 @@ SET(CMAKE_DEPENDS_LANGUAGES
 SET(CMAKE_DEPENDS_CHECK_C
   "/media/sf_VMShared/asteroids/src/game.c" "/media/sf_VMShared/asteroids/build/src/CMakeFiles/asteroids.dir/game.c.o"
   "/media/sf_VMShared/asteroids/src/main.c" "/media/sf_VMShared/asteroids/build/src/CMakeFiles/asteroids.dir/main.c.o"
+  "/media/sf_VMShared/asteroids/src/player.c" "/media/sf_VMShared/asteroids/build/src/CMakeFiles/asteroids.dir/player.c.o"
+  "/media/sf_VMShared/asteroids/src/timer.c" "/media/sf_VMShared/asteroids/build/src/CMakeFiles/asteroids.dir/timer.c.o"
   )
 SET(CMAKE_C_COMPILER_ID "GNU")
 

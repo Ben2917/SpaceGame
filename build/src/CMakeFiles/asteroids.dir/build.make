@@ -98,16 +98,66 @@ src/CMakeFiles/asteroids.dir/main.c.o.provides: src/CMakeFiles/asteroids.dir/mai
 
 src/CMakeFiles/asteroids.dir/main.c.o.provides.build: src/CMakeFiles/asteroids.dir/main.c.o
 
+src/CMakeFiles/asteroids.dir/player.c.o: src/CMakeFiles/asteroids.dir/flags.make
+src/CMakeFiles/asteroids.dir/player.c.o: ../src/player.c
+	$(CMAKE_COMMAND) -E cmake_progress_report /media/sf_VMShared/asteroids/build/CMakeFiles $(CMAKE_PROGRESS_3)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object src/CMakeFiles/asteroids.dir/player.c.o"
+	cd /media/sf_VMShared/asteroids/build/src && /bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/asteroids.dir/player.c.o   -c /media/sf_VMShared/asteroids/src/player.c
+
+src/CMakeFiles/asteroids.dir/player.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/asteroids.dir/player.c.i"
+	cd /media/sf_VMShared/asteroids/build/src && /bin/cc  $(C_DEFINES) $(C_FLAGS) -E /media/sf_VMShared/asteroids/src/player.c > CMakeFiles/asteroids.dir/player.c.i
+
+src/CMakeFiles/asteroids.dir/player.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/asteroids.dir/player.c.s"
+	cd /media/sf_VMShared/asteroids/build/src && /bin/cc  $(C_DEFINES) $(C_FLAGS) -S /media/sf_VMShared/asteroids/src/player.c -o CMakeFiles/asteroids.dir/player.c.s
+
+src/CMakeFiles/asteroids.dir/player.c.o.requires:
+.PHONY : src/CMakeFiles/asteroids.dir/player.c.o.requires
+
+src/CMakeFiles/asteroids.dir/player.c.o.provides: src/CMakeFiles/asteroids.dir/player.c.o.requires
+	$(MAKE) -f src/CMakeFiles/asteroids.dir/build.make src/CMakeFiles/asteroids.dir/player.c.o.provides.build
+.PHONY : src/CMakeFiles/asteroids.dir/player.c.o.provides
+
+src/CMakeFiles/asteroids.dir/player.c.o.provides.build: src/CMakeFiles/asteroids.dir/player.c.o
+
+src/CMakeFiles/asteroids.dir/timer.c.o: src/CMakeFiles/asteroids.dir/flags.make
+src/CMakeFiles/asteroids.dir/timer.c.o: ../src/timer.c
+	$(CMAKE_COMMAND) -E cmake_progress_report /media/sf_VMShared/asteroids/build/CMakeFiles $(CMAKE_PROGRESS_4)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object src/CMakeFiles/asteroids.dir/timer.c.o"
+	cd /media/sf_VMShared/asteroids/build/src && /bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/asteroids.dir/timer.c.o   -c /media/sf_VMShared/asteroids/src/timer.c
+
+src/CMakeFiles/asteroids.dir/timer.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/asteroids.dir/timer.c.i"
+	cd /media/sf_VMShared/asteroids/build/src && /bin/cc  $(C_DEFINES) $(C_FLAGS) -E /media/sf_VMShared/asteroids/src/timer.c > CMakeFiles/asteroids.dir/timer.c.i
+
+src/CMakeFiles/asteroids.dir/timer.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/asteroids.dir/timer.c.s"
+	cd /media/sf_VMShared/asteroids/build/src && /bin/cc  $(C_DEFINES) $(C_FLAGS) -S /media/sf_VMShared/asteroids/src/timer.c -o CMakeFiles/asteroids.dir/timer.c.s
+
+src/CMakeFiles/asteroids.dir/timer.c.o.requires:
+.PHONY : src/CMakeFiles/asteroids.dir/timer.c.o.requires
+
+src/CMakeFiles/asteroids.dir/timer.c.o.provides: src/CMakeFiles/asteroids.dir/timer.c.o.requires
+	$(MAKE) -f src/CMakeFiles/asteroids.dir/build.make src/CMakeFiles/asteroids.dir/timer.c.o.provides.build
+.PHONY : src/CMakeFiles/asteroids.dir/timer.c.o.provides
+
+src/CMakeFiles/asteroids.dir/timer.c.o.provides.build: src/CMakeFiles/asteroids.dir/timer.c.o
+
 # Object files for target asteroids
 asteroids_OBJECTS = \
 "CMakeFiles/asteroids.dir/game.c.o" \
-"CMakeFiles/asteroids.dir/main.c.o"
+"CMakeFiles/asteroids.dir/main.c.o" \
+"CMakeFiles/asteroids.dir/player.c.o" \
+"CMakeFiles/asteroids.dir/timer.c.o"
 
 # External object files for target asteroids
 asteroids_EXTERNAL_OBJECTS =
 
 ../bin/asteroids: src/CMakeFiles/asteroids.dir/game.c.o
 ../bin/asteroids: src/CMakeFiles/asteroids.dir/main.c.o
+../bin/asteroids: src/CMakeFiles/asteroids.dir/player.c.o
+../bin/asteroids: src/CMakeFiles/asteroids.dir/timer.c.o
 ../bin/asteroids: src/CMakeFiles/asteroids.dir/build.make
 ../bin/asteroids: /usr/lib64/libSDL2.so
 ../bin/asteroids: /usr/lib64/libSDL2_image.so
@@ -121,6 +171,8 @@ src/CMakeFiles/asteroids.dir/build: ../bin/asteroids
 
 src/CMakeFiles/asteroids.dir/requires: src/CMakeFiles/asteroids.dir/game.c.o.requires
 src/CMakeFiles/asteroids.dir/requires: src/CMakeFiles/asteroids.dir/main.c.o.requires
+src/CMakeFiles/asteroids.dir/requires: src/CMakeFiles/asteroids.dir/player.c.o.requires
+src/CMakeFiles/asteroids.dir/requires: src/CMakeFiles/asteroids.dir/timer.c.o.requires
 .PHONY : src/CMakeFiles/asteroids.dir/requires
 
 src/CMakeFiles/asteroids.dir/clean:
