@@ -16,21 +16,39 @@
 #include "game.h"
 
 
-#define PLAYER_WIDTH 80
-#define PLAYER_HEIGHT 120
+#define BULLET_MAX 20
+#define BULLET_SPEED 640
+#define BULLET_FILENAME "resources/square.png"
+#define BULLET_SIZE 2
+#define BULLET_DELAY 0.5
+
+#define PLAYER_WIDTH 16
+#define PLAYER_HEIGHT 16
 #define PI 3.1415
 
 
 typedef struct {
 
-  // hitboxes and render dest
-  SDL_Rect hbOne, hbTwo, hbThree, dest;
+  double angle;
+
+  SDL_Rect dest;
+
+  SDL_Texture *t;
+
+} Bullet;
+
+
+typedef struct {
+
+  SDL_Rect dest;
 
   SDL_Texture *t;
 
   double angle;
 
-  int speed;
+  int speed, bulletIndex;
+
+  Bullet **b;
 
 } Player;
 
