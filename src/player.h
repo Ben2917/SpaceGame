@@ -5,7 +5,6 @@
 
 
 #include <stdlib.h>
-#include <stdio.h>
 #include <math.h>
 
 
@@ -14,17 +13,6 @@
 
 
 #include "game.h"
-
-
-#define BULLET_MAX 20
-#define BULLET_SPEED 640
-#define BULLET_FILENAME "resources/square.png"
-#define BULLET_SIZE 2
-#define BULLET_DELAY 0.5
-
-#define PLAYER_WIDTH 16
-#define PLAYER_HEIGHT 16
-#define PI 3.1415
 
 
 typedef struct {
@@ -44,7 +32,7 @@ typedef struct {
 
   SDL_Texture *t;
 
-  double angle;
+  double angle, prevBullet;
 
   int speed, bulletIndex;
 

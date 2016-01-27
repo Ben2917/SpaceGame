@@ -1,4 +1,5 @@
 FILE(REMOVE_RECURSE
+  "CMakeFiles/asteroids.dir/asteroid.c.o"
   "CMakeFiles/asteroids.dir/game.c.o"
   "CMakeFiles/asteroids.dir/main.c.o"
   "CMakeFiles/asteroids.dir/player.c.o"

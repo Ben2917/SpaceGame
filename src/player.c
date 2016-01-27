@@ -3,6 +3,14 @@
 #include "player.h"
 
 
+#define BULLET_MAX 10
+#define BULLET_SPEED 640
+#define BULLET_FILENAME "resources/square.png"
+#define BULLET_SIZE 2
+#define BULLET_DELAY 0.25
+#define PLAYER_SPEED 320
+
+
 Bullet *CreateBullet(SDL_Renderer *r, int x, int y, double a)
 {
 
@@ -75,10 +83,6 @@ Player *CreatePlayer(SDL_Renderer *r, char *tName)
 
   SDL_QueryTexture(temp->t, NULL, NULL, &temp->dest.w, &temp->dest.h);
 
-  if(temp->dest.w != PLAYER_WIDTH || temp->dest.h != PLAYER_HEIGHT)
-    printf("Warning: Unexpected texture width.\n");
-
-  // Start player in the centre of the screen
   temp->dest.x = (SCREEN_WIDTH / 2) - (temp->dest.w / 2);
 
   temp->dest.y = (SCREEN_HEIGHT / 2) - (temp->dest.h / 2);
@@ -113,7 +117,7 @@ void MovePlayer(SDL_Renderer *r, Player *p)
   const Uint8* keys = SDL_GetKeyboardState(NULL);
 
   if(keys[SDL_SCANCODE_UP])
-    p->speed = 320;
+    p->speed = PLAYER_SPEED;
 
   if(!keys[SDL_SCANCODE_UP])
     p->speed = 0;
@@ -136,9 +140,15 @@ void MovePlayer(SDL_Renderer *r, Player *p)
 
   }
 
-  if(keys[SDL_SCANCODE_SPACE])
+  if(keys[SDL_SCANCODE_SPACE] && p->bulletIndex < BULLET_MAX
+    && p->prevBullet > BULLET_DELAY) {
+    
     p->b[p->bulletIndex++] = CreateBullet(r, p->dest.x + (p->dest.w / 2), 
       p->dest.y + (p->dest.h / 2), p->angle);
+
+    p->prevBullet = 0.0;
+
+  }
 
 }
 
@@ -148,13 +158,13 @@ void UpdatePlayer(SDL_Renderer *r, Player *p, double frameTime)
 
   MovePlayer(r, p);
 
+  p->prevBullet += frameTime;
+
   p->dest.x += sin(p->angle * PI / 180) * (p->speed * frameTime);
 
   p->dest.y -= cos(p->angle * PI / 180) * (p->speed * frameTime);
 
   WrapAround(p);
-
-  // printf("x: %d y: %d\n", p->dest.x, p->dest.y);
 
   for(int i = 0; i < p->bulletIndex; ++i) {
   
@@ -179,6 +189,13 @@ void DestroyPlayer(Player *p)
 {
 
   SDL_DestroyTexture(p->t);
+
+  for(int i = 0; i < p->bulletIndex; ++i)
+    DestroyBullet(p->b[i]);
+
+  free(p->b);
+
+  p->b = 0;
 
   free(p);
 

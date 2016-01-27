@@ -4,6 +4,7 @@ SET(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 SET(CMAKE_DEPENDS_CHECK_C
+  "/media/sf_VMShared/asteroids/src/asteroid.c" "/media/sf_VMShared/asteroids/build/src/CMakeFiles/asteroids.dir/asteroid.c.o"
   "/media/sf_VMShared/asteroids/src/game.c" "/media/sf_VMShared/asteroids/build/src/CMakeFiles/asteroids.dir/game.c.o"
   "/media/sf_VMShared/asteroids/src/main.c" "/media/sf_VMShared/asteroids/build/src/CMakeFiles/asteroids.dir/main.c.o"
   "/media/sf_VMShared/asteroids/src/player.c" "/media/sf_VMShared/asteroids/build/src/CMakeFiles/asteroids.dir/player.c.o"

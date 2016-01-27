@@ -156,6 +156,30 @@ asteroids/fast:
 	cd /media/sf_VMShared/asteroids/build && $(MAKE) -f src/CMakeFiles/asteroids.dir/build.make src/CMakeFiles/asteroids.dir/build
 .PHONY : asteroids/fast
 
+asteroid.o: asteroid.c.o
+.PHONY : asteroid.o
+
+# target to build an object file
+asteroid.c.o:
+	cd /media/sf_VMShared/asteroids/build && $(MAKE) -f src/CMakeFiles/asteroids.dir/build.make src/CMakeFiles/asteroids.dir/asteroid.c.o
+.PHONY : asteroid.c.o
+
+asteroid.i: asteroid.c.i
+.PHONY : asteroid.i
+
+# target to preprocess a source file
+asteroid.c.i:
+	cd /media/sf_VMShared/asteroids/build && $(MAKE) -f src/CMakeFiles/asteroids.dir/build.make src/CMakeFiles/asteroids.dir/asteroid.c.i
+.PHONY : asteroid.c.i
+
+asteroid.s: asteroid.c.s
+.PHONY : asteroid.s
+
+# target to generate assembly for a file
+asteroid.c.s:
+	cd /media/sf_VMShared/asteroids/build && $(MAKE) -f src/CMakeFiles/asteroids.dir/build.make src/CMakeFiles/asteroids.dir/asteroid.c.s
+.PHONY : asteroid.c.s
+
 game.o: game.c.o
 .PHONY : game.o
 
@@ -265,6 +289,9 @@ help:
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
+	@echo "... asteroid.o"
+	@echo "... asteroid.i"
+	@echo "... asteroid.s"
 	@echo "... game.o"
 	@echo "... game.i"
 	@echo "... game.s"

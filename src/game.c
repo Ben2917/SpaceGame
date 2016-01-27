@@ -2,7 +2,6 @@
 
 #include "game.h"
 
-
 int EventLoop()
 {
 
@@ -39,8 +38,8 @@ int Init(SDL_Window **w, SDL_Renderer **r)
 
   }
 
-  *r = SDL_CreateRenderer(*w, -1, 
-    SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
+  *r = SDL_CreateRenderer(*w, -1, SDL_RENDERER_ACCELERATED 
+    | SDL_RENDERER_PRESENTVSYNC);
 
   if(!*r)
     return -1;
@@ -79,7 +78,7 @@ void GameLoop()
     SDL_Delay(17);
 
     SDL_SetRenderDrawColor(r, 0, 0, 0, 255);
- 
+
     SDL_RenderClear(r);
 
     UpdatePlayer(r, p, time);
@@ -89,8 +88,6 @@ void GameLoop()
     StopTimer();
 
     time = GetTime();
-
-    // printf("%lf\n", time);
 
   }
 

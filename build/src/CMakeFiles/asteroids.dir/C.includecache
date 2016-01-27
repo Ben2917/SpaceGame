@@ -6,6 +6,22 @@
 
 #IncludeRegexTransform: 
 
+/media/sf_VMShared/asteroids/src/asteroid.h
+SDL.h
+-
+SDL_image.h
+-
+stdlib.h
+-
+math.h
+-
+game.h
+/media/sf_VMShared/asteroids/src/game.h
+
+/media/sf_VMShared/asteroids/src/game.c
+game.h
+/media/sf_VMShared/asteroids/src/game.h
+
 /media/sf_VMShared/asteroids/src/game.h
 SDL.h
 -
@@ -15,15 +31,11 @@ player.h
 /media/sf_VMShared/asteroids/src/player.h
 timer.h
 /media/sf_VMShared/asteroids/src/timer.h
-
-/media/sf_VMShared/asteroids/src/player.c
-player.h
-/media/sf_VMShared/asteroids/src/player.h
+asteroid.h
+/media/sf_VMShared/asteroids/src/asteroid.h
 
 /media/sf_VMShared/asteroids/src/player.h
 stdlib.h
--
-stdio.h
 -
 math.h
 -

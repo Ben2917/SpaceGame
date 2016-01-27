@@ -52,9 +52,32 @@ include src/CMakeFiles/asteroids.dir/progress.make
 # Include the compile flags for this target's objects.
 include src/CMakeFiles/asteroids.dir/flags.make
 
+src/CMakeFiles/asteroids.dir/asteroid.c.o: src/CMakeFiles/asteroids.dir/flags.make
+src/CMakeFiles/asteroids.dir/asteroid.c.o: ../src/asteroid.c
+	$(CMAKE_COMMAND) -E cmake_progress_report /media/sf_VMShared/asteroids/build/CMakeFiles $(CMAKE_PROGRESS_1)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object src/CMakeFiles/asteroids.dir/asteroid.c.o"
+	cd /media/sf_VMShared/asteroids/build/src && /bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/asteroids.dir/asteroid.c.o   -c /media/sf_VMShared/asteroids/src/asteroid.c
+
+src/CMakeFiles/asteroids.dir/asteroid.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/asteroids.dir/asteroid.c.i"
+	cd /media/sf_VMShared/asteroids/build/src && /bin/cc  $(C_DEFINES) $(C_FLAGS) -E /media/sf_VMShared/asteroids/src/asteroid.c > CMakeFiles/asteroids.dir/asteroid.c.i
+
+src/CMakeFiles/asteroids.dir/asteroid.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/asteroids.dir/asteroid.c.s"
+	cd /media/sf_VMShared/asteroids/build/src && /bin/cc  $(C_DEFINES) $(C_FLAGS) -S /media/sf_VMShared/asteroids/src/asteroid.c -o CMakeFiles/asteroids.dir/asteroid.c.s
+
+src/CMakeFiles/asteroids.dir/asteroid.c.o.requires:
+.PHONY : src/CMakeFiles/asteroids.dir/asteroid.c.o.requires
+
+src/CMakeFiles/asteroids.dir/asteroid.c.o.provides: src/CMakeFiles/asteroids.dir/asteroid.c.o.requires
+	$(MAKE) -f src/CMakeFiles/asteroids.dir/build.make src/CMakeFiles/asteroids.dir/asteroid.c.o.provides.build
+.PHONY : src/CMakeFiles/asteroids.dir/asteroid.c.o.provides
+
+src/CMakeFiles/asteroids.dir/asteroid.c.o.provides.build: src/CMakeFiles/asteroids.dir/asteroid.c.o
+
 src/CMakeFiles/asteroids.dir/game.c.o: src/CMakeFiles/asteroids.dir/flags.make
 src/CMakeFiles/asteroids.dir/game.c.o: ../src/game.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /media/sf_VMShared/asteroids/build/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /media/sf_VMShared/asteroids/build/CMakeFiles $(CMAKE_PROGRESS_2)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object src/CMakeFiles/asteroids.dir/game.c.o"
 	cd /media/sf_VMShared/asteroids/build/src && /bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/asteroids.dir/game.c.o   -c /media/sf_VMShared/asteroids/src/game.c
 
@@ -77,7 +100,7 @@ src/CMakeFiles/asteroids.dir/game.c.o.provides.build: src/CMakeFiles/asteroids.d
 
 src/CMakeFiles/asteroids.dir/main.c.o: src/CMakeFiles/asteroids.dir/flags.make
 src/CMakeFiles/asteroids.dir/main.c.o: ../src/main.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /media/sf_VMShared/asteroids/build/CMakeFiles $(CMAKE_PROGRESS_2)
+	$(CMAKE_COMMAND) -E cmake_progress_report /media/sf_VMShared/asteroids/build/CMakeFiles $(CMAKE_PROGRESS_3)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object src/CMakeFiles/asteroids.dir/main.c.o"
 	cd /media/sf_VMShared/asteroids/build/src && /bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/asteroids.dir/main.c.o   -c /media/sf_VMShared/asteroids/src/main.c
 
@@ -100,7 +123,7 @@ src/CMakeFiles/asteroids.dir/main.c.o.provides.build: src/CMakeFiles/asteroids.d
 
 src/CMakeFiles/asteroids.dir/player.c.o: src/CMakeFiles/asteroids.dir/flags.make
 src/CMakeFiles/asteroids.dir/player.c.o: ../src/player.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /media/sf_VMShared/asteroids/build/CMakeFiles $(CMAKE_PROGRESS_3)
+	$(CMAKE_COMMAND) -E cmake_progress_report /media/sf_VMShared/asteroids/build/CMakeFiles $(CMAKE_PROGRESS_4)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object src/CMakeFiles/asteroids.dir/player.c.o"
 	cd /media/sf_VMShared/asteroids/build/src && /bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/asteroids.dir/player.c.o   -c /media/sf_VMShared/asteroids/src/player.c
 
@@ -123,7 +146,7 @@ src/CMakeFiles/asteroids.dir/player.c.o.provides.build: src/CMakeFiles/asteroids
 
 src/CMakeFiles/asteroids.dir/timer.c.o: src/CMakeFiles/asteroids.dir/flags.make
 src/CMakeFiles/asteroids.dir/timer.c.o: ../src/timer.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /media/sf_VMShared/asteroids/build/CMakeFiles $(CMAKE_PROGRESS_4)
+	$(CMAKE_COMMAND) -E cmake_progress_report /media/sf_VMShared/asteroids/build/CMakeFiles $(CMAKE_PROGRESS_5)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object src/CMakeFiles/asteroids.dir/timer.c.o"
 	cd /media/sf_VMShared/asteroids/build/src && /bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/asteroids.dir/timer.c.o   -c /media/sf_VMShared/asteroids/src/timer.c
 
@@ -146,6 +169,7 @@ src/CMakeFiles/asteroids.dir/timer.c.o.provides.build: src/CMakeFiles/asteroids.
 
 # Object files for target asteroids
 asteroids_OBJECTS = \
+"CMakeFiles/asteroids.dir/asteroid.c.o" \
 "CMakeFiles/asteroids.dir/game.c.o" \
 "CMakeFiles/asteroids.dir/main.c.o" \
 "CMakeFiles/asteroids.dir/player.c.o" \
@@ -154,6 +178,7 @@ asteroids_OBJECTS = \
 # External object files for target asteroids
 asteroids_EXTERNAL_OBJECTS =
 
+../bin/asteroids: src/CMakeFiles/asteroids.dir/asteroid.c.o
 ../bin/asteroids: src/CMakeFiles/asteroids.dir/game.c.o
 ../bin/asteroids: src/CMakeFiles/asteroids.dir/main.c.o
 ../bin/asteroids: src/CMakeFiles/asteroids.dir/player.c.o
@@ -169,6 +194,7 @@ asteroids_EXTERNAL_OBJECTS =
 src/CMakeFiles/asteroids.dir/build: ../bin/asteroids
 .PHONY : src/CMakeFiles/asteroids.dir/build
 
+src/CMakeFiles/asteroids.dir/requires: src/CMakeFiles/asteroids.dir/asteroid.c.o.requires
 src/CMakeFiles/asteroids.dir/requires: src/CMakeFiles/asteroids.dir/game.c.o.requires
 src/CMakeFiles/asteroids.dir/requires: src/CMakeFiles/asteroids.dir/main.c.o.requires
 src/CMakeFiles/asteroids.dir/requires: src/CMakeFiles/asteroids.dir/player.c.o.requires
