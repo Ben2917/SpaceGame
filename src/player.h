@@ -5,6 +5,7 @@
 
 
 #include <stdlib.h>
+#include <stdio.h>
 #include <math.h>
 
 
@@ -12,7 +13,8 @@
 #include <SDL_image.h>
 
 
-#include "game.h"
+#include "asteroid.h"
+#include "constants.h"
 
 
 typedef struct {
@@ -44,8 +46,7 @@ typedef struct {
 Player *CreatePlayer(SDL_Renderer *r, char *tName);
 
 
-void UpdatePlayer(SDL_Renderer *r, Player *p, double frameTime); 
-// pass array to check collision against
+int UpdatePlayer(SDL_Renderer *r, Player *p, double frameTime);//, Asteroid *ast); 
 
 
 void DestroyPlayer(Player *p);

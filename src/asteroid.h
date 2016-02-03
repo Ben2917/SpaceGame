@@ -12,7 +12,7 @@
 #include <math.h>
 
 
-#include "game.h"
+#include "constants.h"
 
 
 typedef struct {

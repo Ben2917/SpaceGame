@@ -5,19 +5,19 @@
 
 
 #include"game.h"
-
+// I so turnt
 
 int main()
 {
 
   srand(time(NULL));
 
-  if(SDL_Init(SDL_INIT_EVERYTHING) != 0)
+  if(SDL_Init(SDL_INIT_VIDEO) != 0)
     return -1;
 
   GameLoop();  
 
-  SDL_Quit();
+  atexit(SDL_Quit);
 
   return 0;
 

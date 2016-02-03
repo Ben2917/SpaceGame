@@ -8,14 +8,9 @@
 #include <SDL_image.h>
 
 
+#include "asteroid.h"
 #include "player.h"
 #include "timer.h"
-#include "asteroid.h"
-
-
-#define SCREEN_WIDTH 720
-#define SCREEN_HEIGHT 720
-#define PI 3.1415
 
 
 void GameLoop();

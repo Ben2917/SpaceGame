@@ -2,6 +2,15 @@
 
 #include "game.h"
 
+
+// Global variables
+
+SDL_Window *w;
+SDL_Renderer *r;
+Player *p;
+
+
+
 int EventLoop()
 {
 
@@ -41,20 +50,28 @@ int Init(SDL_Window **w, SDL_Renderer **r)
   *r = SDL_CreateRenderer(*w, -1, SDL_RENDERER_ACCELERATED 
     | SDL_RENDERER_PRESENTVSYNC);
 
-  if(!*r)
+  if(!*r) {
+
+    SDL_DestroyWindow(*w);
     return -1;
+
+  }
 
   return 0;
 
 }
 
 
-void Destroy(SDL_Window **w, SDL_Renderer **r)
+void Destroy(SDL_Window *w, SDL_Renderer *r)
 {
 
-  SDL_DestroyWindow(*w);
+  SDL_DestroyWindow(w);
 
-  SDL_DestroyRenderer(*r);
+  // printf("Freed Window.\n");
+
+  SDL_DestroyRenderer(r);
+
+  // printf("Freed Renderer.\n");
 
 }
 
@@ -62,12 +79,16 @@ void Destroy(SDL_Window **w, SDL_Renderer **r)
 void GameLoop()
 {
 
-  SDL_Window *w; SDL_Renderer *r;
+  // SDL_Window *w; SDL_Renderer *r;
 
-  if(Init(&w, &r) != 0)
+  if(Init(&w, &r) != 0) 
     return;
 
-  Player *p = CreatePlayer(r, "resources/player.png");
+  //Player *p 
+  p = CreatePlayer(r, "resources/player.png");
+
+  if(p == NULL) 
+    return;
 
   double time = 0.0;
 
@@ -81,7 +102,8 @@ void GameLoop()
 
     SDL_RenderClear(r);
 
-    UpdatePlayer(r, p, time);
+    if (UpdatePlayer(r, p, time))
+      break;
 
     SDL_RenderPresent(r);
   
@@ -91,8 +113,8 @@ void GameLoop()
 
   }
 
-  Destroy(&w, &r);
-
   DestroyPlayer(p);
+
+  Destroy(w, r);
 
 }
