@@ -28,6 +28,8 @@ typedef struct {
 } Bullet;
 
 
+// Player objects hold the handle to their bullets
+// Extensible for multiplayer support
 typedef struct {
 
   SDL_Rect dest;

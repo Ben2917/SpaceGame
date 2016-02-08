@@ -11,11 +11,6 @@
 #define PLAYER_SPEED 320
 
 
-//Bullet **b; // Psuedo array to store bullets in
-//int bulletIndex; // current index of the array
-
-
-
 Bullet *CreateBullet(SDL_Renderer *r, int x, int y, double a)
 {
 
@@ -155,31 +150,6 @@ void MovePlayer(SDL_Renderer *r, Player *p)
 }
 
 
-int InRange(int check, int lower, int upper)
-{
-
-  if(check > lower && check < upper)
-    return 1;
-
-  return 0;
-
-}
-
-
-int FilfyIntersect(SDL_Rect one, SDL_Rect two)
-{
-
-  if((InRange(one.x, two.x, two.x + two.w) && InRange(one.y, two.y, two.y + two.h)) || // top left
-    (InRange(one.x + one.w, two.x, two.x + two.w) && InRange(one.y, two.y, two.y + two.h)) || 
-    (InRange(one.x, two.x, two.x + two.w) && InRange(one.y + one.h, two.y, two.y + two.h)) ||
-    (InRange(one.x + one.w, two.x, two.x + two.w) && InRange(one.y + one.h, two.y, two.y + two.h)))
-    return 1;
-
-  return 0;
-
-}
-
-
 int UpdatePlayer(SDL_Renderer *r, Player *p, double frameTime)//, Asteroid *ast)
 {
 
@@ -193,9 +163,6 @@ int UpdatePlayer(SDL_Renderer *r, Player *p, double frameTime)//, Asteroid *ast)
 
   WrapAround(p);
 
-  /*if(FilfyIntersect(p->dest, ast->dest))
-    return 1;
-*/
   for(int i = 0; i < p->bulletIndex; ++i) {
   
     if(UpdateBullet(r, p->b[i], frameTime)) {
@@ -222,17 +189,17 @@ void DestroyPlayer(Player *p)
 
   SDL_DestroyTexture(p->t);
 
-  printf("Freed texture.\n");
+  // printf("Freed texture.\n");
 
   // Destroy any bullets remaining on the screen
   for(int i = 0; i < p->bulletIndex; ++i)
     DestroyBullet(p->b[i]);
 
-  printf("Freed bullets.\n");
+  // printf("Freed bullets.\n");
 
   free(p->b);
 
-  printf("Freed total array.\n");
+  // printf("Freed total array.\n");
 
   p->b = 0;
 
@@ -240,6 +207,6 @@ void DestroyPlayer(Player *p)
 
   p = 0;
 
-  printf("Freed player.\n");
+  // printf("Freed player.\n");
 
 }
